@@ -4,154 +4,25 @@ import csv
 class WorkSpider(scrapy.Spider):
     name = 'drugs'
 
-    # custom_settings = {
-    #     # specifies exported fields and order
-    #     'FEED_EXPORT_FIELDS': [
-    #         "Url","Generic Name:","Brand Name:","What is","Dosage Forms","Index Terms"
-    #
-    #
-    #     ]
-    # };
+    custom_settings = {
+        # specifies exported fields and order
+        'FEED_EXPORT_FIELDS': [
+            "Url","Generic Name:","Brand Name:","What is","Dosage Forms","Index Terms"
+    
+    
+        ]
+    };
 
     urls = [
         "https://www.drugs.com/alpha/ab.html",
-        # "https://www.drugs.com/alpha/0-9.html"
+       
     ]
     # i = 98
     # while i < 122:
     #     ur = "https://www.drugs.com/alpha/a"+chr(i)+".html"
     #     urls.append(ur)
     #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/b" + chr(i) +".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/c" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/d" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/e" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/f" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/g" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/j" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/i" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/j" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/k" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/l" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/m" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/n" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/o" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/p" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/q" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/r" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/s" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/t" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/u" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/v" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/w" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/x" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/y" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/z" + chr(i) + ".html"
-    #     urls.append(ur)
-    #     i += 1
-    # i = 97
-    # while i < 122:
-    #     ur = "https://www.drugs.com/alpha/" + chr(i) + "0-9.html"
-    #     urls.append(ur)
-    #     i += 1
+    
 
     def start_requests(self):
 
@@ -264,14 +135,6 @@ class WorkSpider(scrapy.Spider):
             what_is=all_text.split(what_is_text)[1].split(after_what_is)[0].strip()
 
 
-        # profetabs= response.xpath('//ul[@class="nav-tabs nav-tabs-collapse vmig"]/li[4]/a')
-        # prolinks = []
-        #
-        # for protab in profetabs:
-        #     prolink = protab.xpath('./@href').extract_first()
-        #     prolinks.append(prolink)
-
-
 
         lis = response.css('.nav-tabs').css('li')
 
@@ -288,24 +151,9 @@ class WorkSpider(scrapy.Spider):
             if text=='Professional':
                 href='https://www.drugs.com'+li.xpath('./a/@href').extract_first()
                 yield scrapy.Request(url=href, callback=self.ppadata, headers={'User-Agent': 'Mozilla Firefox 12.0'},meta={'genaricname': genaricNames,'brandname': brandNames, 'whatis':what_is},dont_filter=True)        # try:
-        #     i = 0
-        #     for p in prolinks:
-        #         l = 'https://www.drugs.com' + p
-        #         yield scrapy.Request(url=l, callback=self.ppadata,
-        #                              headers={"User-Agent": "Mozilla Firefox 12.0"},
-        #                              meta={'genaricname': genaricNames[i],'brandname': brandNames[i], 'whatis':whIs[i],'whatis1':whIs1[i],'whatis2':whIs2[i]})
-        #
-        #         i += 1
-        # except:
-        #     pass
+       
 
     def ppadata(self,response):
-
-        # index=response.xpath('//div[@class="content"]')
-        #
-        # for x in index.xpath('//h2/text()').extract():
-        #     a=x.split('Pronunciation')[0]
-        #     b=a.split('Dosage Forms')[-1]
 
         content = response.css(".contentBox")
 
@@ -339,11 +187,6 @@ class WorkSpider(scrapy.Spider):
         dosage_form = ""
         if dosage_form_before != "" and dosage_form_after != "":
             dosage_form = all_text.split(dosage_form_before)[1].split(dosage_form_after)[0].strip()
-
-        # dsg1= response.xpath('//p[3]/text()').extract()
-        # dsg2= response.xpath('//p[4]/text()').extract()
-        # dsg3= response.xpath('//p[5]/text()').extract()
-        # dosage= ''.join(dsg1)+''.join(dsg2)+''.join(dsg3)
 
 
         yield {
